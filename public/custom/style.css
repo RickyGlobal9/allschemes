@@ -1,0 +1,67 @@
+.nowrap {
+  display: inline-block;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.loading-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-wrapper .loading {
+  width: 27px;
+  height: 27px;
+  border: solid 2px #5e72e4;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-brand-img {
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #menu {
+    display: none;
+  }
+}
+
+.categories img,
+#schemes img,
+#categories img {
+  margin-top: 15px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+#schemes img {
+  /* margin-top: -15px; */
+}
+
+/* modal body items */
+.mb-items {
+  display: none;
+}

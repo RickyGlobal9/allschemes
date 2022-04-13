@@ -1,0 +1,416 @@
+<!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Anova Tech">
+    <title>
+        <%=title%>
+    </title>
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="/custom/style.css">
+</head>
+
+<body>
+    <!-- Sidenav -->
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        <div class="scrollbar-inner">
+            <!-- Brand -->
+            <div class="sidenav-header align-items-center">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <p>Golden Eagle Enterprises</p>
+                </a>
+            </div>
+            <div class="navbar-inner">
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <!-- Nav items -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a id="one" class="nav-link" href="/dashboard">
+                                <i class="ni ni-tv-2 text-primary"></i>
+                                <span class="nav-link-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="two" class="nav-link active" href="/categories">
+                                <i class="ni ni-single-02 text-red"></i>
+                                <span class="nav-link-text">Categories</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="three" class="nav-link" href="/applications">
+                                <i class="ni ni-bullet-list-67 text-default"></i>
+                                <span class="nav-link-text">Applications</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a id="four" class="nav-link" href="/hotel-entry">
+                                <i class="ni ni-key-25 text-info"></i>
+                                <span class="nav-link-text">Hotel Entry</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="five" class="nav-link" href="/hotels">
+                                <i class="ni ni-circle-08 text-pink"></i>
+                                <span class="nav-link-text">Hotel List</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="six" class="nav-link" href="/file-manager">
+                                <i class="ni ni-folder-17 text-green"></i>
+                                <span class="nav-link-text">File Manager</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="seven" class="nav-link" href="/accounts">
+                                <i class="ni ni-lock-circle-open text-blue"></i>
+                                <span class="nav-link-text">Accounts</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="eight" class="nav-link" href="/reports">
+                                <i class="ni ni-chart-bar-32 text-orange"></i>
+                                <span class="nav-link-text">Reports</span>
+                            </a>
+                        </li> -->
+                    </ul>
+                    <!-- Divider -->
+                    <!-- <hr class="my-3"> -->
+                    <!-- Heading -->
+                    <!-- <h6 class="navbar-heading p-0 text-muted">
+                        <span class="docs-normal">Staff Management</span>
+                    </h6> -->
+                    <!-- Navigation -->
+                    <!-- <ul class="navbar-nav mb-md-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/add-staff" target="_blank">
+                                <i class="ni ni-spaceship"></i>
+                                <span class="nav-link-text">Add Staff</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/staffs" target="_blank">
+                                <i class="ni ni-palette"></i>
+                                <span class="nav-link-text">Staff Details</span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content" id="panel">
+        <!-- Topnav -->
+        <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar links -->
+                    <ul class="navbar-nav align-items-center  ml-md-auto ">
+                        <li class="nav-item d-xl-none">
+                            <!-- Sidenav toggler -->
+                            <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin"
+                                data-target="#sidenav-main">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <div class="media align-items-center">
+                                    <span class="avatar avatar-sm rounded-circle">
+                                        <img alt="Image placeholder" src="/assets/img/theme/avatar.png">
+                                    </span>
+                                    <div class="media-body  ml-2  d-none d-lg-block">
+                                        <span class="mb-0 text-sm  font-weight-bold">Dev User</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu  dropdown-menu-right ">
+                                <div class="dropdown-header noti-title">
+                                    <h6 class="text-overflow m-0">Welcome!</h6>
+                                </div>
+                                <a href="/profile" class="dropdown-item">
+                                    <i class="ni ni-single-02"></i>
+                                    <span>My profile</span>
+                                </a>
+                                <a href="/settings" class="dropdown-item">
+                                    <i class="ni ni-settings-gear-65"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <!-- <a href="#!" class="dropdown-item">
+                          <i class="ni ni-calendar-grid-58"></i>
+                          <span>Activity</span>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                          <i class="ni ni-support-16"></i>
+                          <span>Support</span>
+                        </a> -->
+                                <div class="dropdown-divider"></div>
+                                <a id="logout" href="#" class="dropdown-item">
+                                    <i class="ni ni-user-run"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-6 col-7">
+                            <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                    <li class="breadcrumb-item"><a href="/dashboard"><i class="fas fa-home"></i></a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Categories</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page content -->
+        <div class="container-fluid mt--6">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card table-card">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 class="mb-0">District Social Welfare Office (DSWO)
+                                        <button id="new_category" class="btn btn-sm bg-primary text-white float-right"
+                                            data-toggle="modal" data-target="#exampleModal">Add Category</button>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <div id="categories" class="row categories">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal_head"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div id="alert" class="mb-items">
+                        <p class="mt--4 text-center">Are you sure you want to remove this category!</p>
+
+                        <div class="form-group text-center button_box"></div>
+                    </div>
+
+                    <div id="edit_form" class="mb-items">
+                        <div class="form-group">
+                            <input id="category_tb" name="category_tb" type="text" class="form-control"
+                                placeholder="Category name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="scheme_tb" name="scheme_tb" type="text" class="form-control"
+                                placeholder="Scheme name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="department_tb" name="department_tb" type="text" class="form-control"
+                                placeholder="Department name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="logo_tb" class="form-control-label">Category Logo</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="logo_tb" name="logo_tb" lang="en"
+                                    required>
+                                <label class="custom-file-label" for="customFileLang">Select file</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group text-center button_box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.js?v=1.2.0"></script>
+    <!-- datatables -->
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            getCategories()
+            function getCategories() {
+                $.get('/getcategories', (response) => {
+                    console.log(response)
+
+                    var categories = $('#categories')
+                    categories.empty()
+
+                    for (let i = 0; i < response.length; i++) {
+                        categories.append(`<div class="col-xl-3 col-md-6">
+                                    <div class="card card-stats shadow-none border">
+                                        <div class="col text-center py-3">
+                                            <div
+                                                class="icon icon-shape bg-gradient-primary text-white rounded-circle shadow">
+                                                <img src="/files/${response[i].logo}" alt="">
+                                            </div>
+
+                                            <h5 class="card-title text-uppercase mb-0">${response[i].category}</h5>
+                                            <h5 class="mb-2 text-muted" id="tbxs">${response[i].scheme}</h5>
+
+                                            <p class="mb-0">
+                                                <button id="edt${i}" class="btn btn-sm bg-warning text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-edit text-white mr-1"></i> Edt</button>
+                                                <button id="del${i}" class="btn btn-sm bg-danger text-white"><i class="fas fa-window-close text-white mr-1"></i>Del</button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>`)
+
+                        //button clicks
+                        $('#edt' + i).on('click', function () {
+                            $('#modal_head').text('Edit this Category')
+                            $('#edit_form .button_box').empty()
+                            $('#edit_form .button_box').append(`<button id="save_category" type="button" class="btn btn-primary">Save Category</button>`)
+
+                            $('.mb-items').hide()
+                            $('#edit_form').show()
+
+                            $("#save_category").on("click", function () {
+
+                            });
+                        })
+
+                        $('#del' + i).on('click', function () {
+                            console.log(response[i].slno)
+                            if (confirm('Are you sure you want to remove this application?')) {
+                                $.get('/removecategory', { slno: response[i].slno }, (response) => {
+                                    alert(response)
+                                })
+                            }
+                        });
+                    }
+                })
+            }
+
+            //New category
+            $('#new_category').on('click', function () {
+                $('#modal_head').text('Add new Category')
+                $('#edit_form .button_box').empty()
+                $('#edit_form .button_box').append(`<button id="submit_category" type="button" class="btn btn-primary">Add Category</button>`)
+
+                $('.mb-items').hide()
+                $('#edit_form').show()
+
+                $("#submit_category").on("click", function () {
+                    var _this = $(this)
+                    var file = $('#logo_tb')[0].files[0];
+
+                    if (file && $('#category_tb').val() && $('#scheme_tb').val() && $('#department_tb').val()) {
+                        $(_this).prop("disabled", true).text('Wait...');
+
+                        var formdata = new FormData();
+                        formdata.append('file', file);
+                        $.ajax({
+                            url: '/upload/',
+                            data: formdata,
+                            contentType: false,
+                            processData: false,
+                            type: 'POST',
+                            'success': function (data) {
+                                console.log(data)
+
+                                $.get('/addcategory', {
+                                    category: $.trim($('#category_tb').val()),
+                                    scheme: $.trim($('#scheme_tb').val()),
+                                    department: $.trim($('#department_tb').val()),
+                                    logo: data
+                                }, (response) => {
+                                    _this.prop("disabled", false).text('Submit')
+                                    $('#edit_form input').val('')
+
+                                    alert(response)
+                                    getCategories()
+                                })
+                            }
+                        });
+                    }
+                    else {
+                        alert('Please provide all the details!')
+                    }
+                });
+            })
+        })
+    </script>
+</body>
+
+</html>

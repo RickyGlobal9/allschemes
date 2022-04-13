@@ -1,0 +1,609 @@
+<!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Anova Tech">
+    <title>
+        <%=title%>
+    </title>
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="/assets/css/argon.css?v=1.2.0" type="text/css">
+    <link rel="stylesheet" href="/custom/style.css">
+</head>
+
+<body>
+    <!-- Sidenav -->
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+        <div class="scrollbar-inner">
+            <!-- Brand -->
+            <div class="sidenav-header align-items-center">
+                <a class="navbar-brand" href="javascript:void(0)">
+                    <img src="/assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+                    <p>Jharkhand Schemes Ltd</p>
+                </a>
+            </div>
+
+            <div class="navbar-inner">
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <!-- Nav items -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item form-group p-3 border-top">
+                            <label for="department_select">Department</label>
+                            <select id="department_select" class="form-control"></select>
+
+                            <button id="bydepartment" class="btn btn-block btn-md btn-primary mt-4">By
+                                Department</button>
+                        </li>
+
+                        <li class="nav-item form-group p-3 border-top">
+                            <label for="schemes_select">Scheme</label>
+                            <select id="schemes_select" class="form-control"></select>
+
+                            <button id="byscheme" class="btn btn-block btn-md btn-primary mt-4">By Scheme</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="main-content d-flex flex-column min-vh-100">
+        <!-- Topnav -->
+        <nav class="navbar navbar-top navbar-expand navbar-dark mb-0">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar links -->
+                    <ul class="navbar-nav align-items-center  ml-md-auto ">
+                        <li class="nav-item d-xl-none">
+                            <!-- Sidenav toggler -->
+                            <div class="pr-3 sidenav-toggler sidenav-toggler-light" data-action="sidenav-pin"
+                                data-target="#sidenav-main">
+                                <div class="sidenav-toggler-inner">
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                    <i class="sidenav-toggler-line"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header -->
+
+        <!-- Header -->
+        <div class="header pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center pb-4">
+                        <div class="col-lg-12 col-12">
+                            <nav id="menu"
+                                class="navbar navbar-expand navbar-dark bg-primary border-bottom rounded mb-4">
+                                <div class="collapse navbar-collapse" id="navbar-primary">
+                                    <ul class="navbar-nav mr-lg-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/">
+                                                <i class="fas fa-home pr-1"></i>
+                                                Home
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/schemes">Schemes</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Guideline</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Fund Summary</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">About</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Contact</a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="navbar-nav ml-lg-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/dashboard">Admin</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page content -->
+        <div class="container-fluid mt--5 mb-5">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card table-card">
+                        <div class="card-header border-0">
+                            <div class="row align-items-center">
+                                <div class="col">
+                                    <h3 class="mb-3">District Social Welfare Office (DSWO)</h3>
+                                </div>
+
+                                <div class="table-responsive">
+                                    <!-- <div id="table_ld" class="card loading-wrapper">
+                                        <div class="loading"></div>
+                                    </div> -->
+
+                                    <table class="table align-items-center table-flush">
+                                        <tbody id="schemes" class="list">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer container-fluid mt-auto text-lg-start text-muted border-top">
+            <section class="">
+                <div class="container text-md-start">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3 pr-2"></i>Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Products
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">First Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Second Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Third Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Fourth</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Fifth Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Sixth Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Seventh Link</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Eighth Link</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Contact
+                            </h6>
+                            <p><i class="fas fa-home me-3"></i> Dumka, JH, India, 814101</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                info@example.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> +91 234 567 88</p>
+                            <p><i class="fas fa-print me-3"></i> +91 234 567 89</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+
+            <div class="p-4 text-center rounded" style="background-color: rgba(0, 0, 0, 0.04);">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="https://navelsoft.com/">navelsoft.com</a>
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal_head"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div id="required_docs" class="mb-items">
+                            required...
+                        </div>
+
+                        <div id="benefits_form" class="mb-items">
+                            benefits...
+                        </div>
+
+                        <form id="apply_form" role="form" class="mb-items">
+                            <div class="form-group">
+                                <input id="name_tb" type="text" class="form-control" placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <input id="mobile_tb" type="text" class="form-control" placeholder="Mobile">
+                            </div>
+
+                            <div class="form-group">
+                                <input id="aadhar_tb" type="text" class="form-control" placeholder="Aadhar">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea id="address_tb" class="form-control" aria-label="With textarea"
+                                    placeholder="Address"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doc1" class="form-control-label">Document 1</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="doc1" lang="en">
+                                    <label class="custom-file-label" for="customFileLang">Select file</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doc2" class="form-control-label">Document 2</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="doc2" lang="en">
+                                    <label class="custom-file-label" for="customFileLang">Select file</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doc3" class="form-control-label">Document 3</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="doc3" lang="en">
+                                    <label class="custom-file-label" for="customFileLang">Select file</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="doc4" class="form-control-label">Document 4</label>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="doc4" lang="en">
+                                    <label class="custom-file-label" for="customFileLang">Select file</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button id="apply_btn" type="button" class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core -->
+    <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="/assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <!-- Argon JS -->
+    <script src="/assets/js/argon.js?v=1.2.0"></script>
+    <!-- datatables -->
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            function uuidv4() {
+                return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+                    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                );
+            }
+
+            const queryString = window.location.search;
+            const parameters = new URLSearchParams(queryString);
+            var dep, sch;
+
+            if (parameters.get('department') != null) {
+                $.get('/getfiltereddepartments', { department: parameters.get('department') }, (response) => {
+                    if (response.length > 0) {
+                        var schemes = $('#schemes')
+                        schemes.empty()
+
+                        for (let i = 0; i < response.length; i++) {
+                            schemes.append(`<tr class="border-top">
+                                                <th scope="row" class="pr-2">
+                                                    <img src="/files/${response[i].logo}" alt="">
+                                                </th>
+
+                                                <td class="pl-0">
+                                                    <h3>${response[i].category}</h3>
+                                                    <p>${response[i].scheme}</p>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="required_btn${i}" class="btn btn-block btn-warning" data-toggle="modal" data-target="#exampleModal">Required Documents</button>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="benefits_btn${i}" class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal">Benefit</button>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="apply_btn${i}" class="btn btn-block btn-success" data-toggle="modal" data-target="#exampleModal">Apply</button>
+                                                </td>
+                                            </tr>`)
+
+                            //button clicks
+                            $('#required_btn' + i).on('click', function () {
+                                $('#modal_head').text('Required Documents')
+                                $('.mb-items').hide()
+                                $('#required_docs').show()
+                            })
+
+                            $('#benefits_btn' + i).on('click', function () {
+                                $('#modal_head').text('Scheme Benefits')
+                                $('.mb-items').hide()
+                                $('#benefits_form').show()
+                            })
+
+                            $('#apply_btn' + i).on('click', function () {
+                                dep = response[i].department;
+                                sch = response[i].scheme
+
+                                $('#modal_head').text('Apply for Scheme')
+                                $('.mb-items').hide()
+                                $('#apply_form').show()
+                            })
+                        }
+                    }
+                    else {
+                        alert('No record found! Moving back to schemes.')
+                        window.location.href = '/schemes'
+                    }
+                })
+            }
+            else if (parameters.get('scheme') != null) {
+                $.get('/getfilteredschemes', { scheme: parameters.get('scheme') }, (response) => {
+                    console.log(response)
+                    if (response.length > 0) {
+                        var schemes = $('#schemes')
+                        schemes.empty()
+
+                        for (let i = 0; i < response.length; i++) {
+                            schemes.append(`<tr class="border-top">
+                                                <th scope="row" class="pr-2">
+                                                    <img src="/files/${response[i].logo}" alt="">
+                                                </th>
+
+                                                <td class="pl-0">
+                                                    <h3>${response[i].category}</h3>
+                                                    <p>${response[i].scheme}</p>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="required_btn${i}" class="btn btn-block btn-warning" data-toggle="modal" data-target="#exampleModal">Required Documents</button>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="benefits_btn${i}" class="btn btn-block btn-primary" data-toggle="modal" data-target="#exampleModal">Benefit</button>
+                                                </td>
+
+                                                <td class="pl-0">
+                                                    <button id="apply_btn${i}" class="btn btn-block btn-success" data-toggle="modal" data-target="#exampleModal">Apply</button>
+                                                </td>
+                                            </tr>`)
+
+                            //button clicks
+                            $('#required_btn' + i).on('click', function () {
+                                $('#modal_head').text('Required Documents')
+                                $('.mb-items').hide()
+                                $('#required_docs').show()
+                            })
+
+                            $('#benefits_btn' + i).on('click', function () {
+                                $('#modal_head').text('Scheme Benefits')
+                                $('.mb-items').hide()
+                                $('#benefits_form').show()
+                            })
+
+                            $('#apply_btn' + i).on('click', function () {
+                                dep = response[i].department;
+                                sch = response[i].scheme
+
+                                $('#modal_head').text('Apply for Scheme')
+                                $('.mb-items').hide()
+                                $('#apply_form').show()
+                            })
+                        }
+                    }
+                    else {
+                        alert('No record found! Moving back to schemes.')
+                        window.location.href = '/schemes'
+                    }
+                })
+            }
+            else {
+                window.location.href = '/schemes'
+            }
+
+            //Apply
+            $('#apply_btn').on('click', function () {
+                console.log('yes')
+                var _this = $(this)
+
+                if ($('#name_tb').val() && $('#mobile_tb').val() && $('#aadhar_tb').val() && $('#address_tb').val() && $('#doc1').val() && $('#doc2').val() && $('#doc3').val() && $('#doc4').val()) {
+                    $(_this).prop('disabled', true).text('Wait...');
+
+                    var doc1 = 0, doc2 = 0, doc3 = 0, doc4 = 0;
+
+                    //upload doc 1
+                    var formdata = new FormData();
+                    formdata.append('file', $('#doc1')[0].files[0]);
+                    $.ajax({
+                        url: '/upload/',
+                        data: formdata,
+                        contentType: false,
+                        processData: false,
+                        type: 'POST',
+                        'success': function (data1) {
+                            //upload doc 2
+                            var formdata = new FormData();
+                            formdata.append('file', $('#doc2')[0].files[0]);
+                            $.ajax({
+                                url: '/upload/',
+                                data: formdata,
+                                contentType: false,
+                                processData: false,
+                                type: 'POST',
+                                'success': function (data2) {
+                                    //upload doc 3
+                                    var formdata = new FormData();
+                                    formdata.append('file', $('#doc3')[0].files[0]);
+                                    $.ajax({
+                                        url: '/upload/',
+                                        data: formdata,
+                                        contentType: false,
+                                        processData: false,
+                                        type: 'POST',
+                                        'success': function (data3) {
+                                            //Upload doc 4
+                                            var formdata = new FormData();
+                                            formdata.append('file', $('#doc4')[0].files[0]);
+                                            $.ajax({
+                                                url: '/upload/',
+                                                data: formdata,
+                                                contentType: false,
+                                                processData: false,
+                                                type: 'POST',
+                                                'success': function (data4) {
+                                                    $.get('/apply', {
+                                                        department: dep,
+                                                        scheme: sch,
+                                                        name: $.trim($('#name_tb').val()),
+                                                        mobile: $.trim($('#mobile_tb').val()),
+                                                        aadhar: $.trim($('#aadhar_tb').val()),
+                                                        address: $.trim($('#address_tb').val()),
+                                                        doc1: data1,
+                                                        doc2: data2,
+                                                        doc3: data3,
+                                                        doc4: data4,
+                                                        track: uuidv4() + Math.floor(Date.now() / 1000)
+                                                    }, (response) => {
+                                                        $(_this).prop('disabled', false).text('Apply');
+                                                        $('input').val('').text('')
+                                                        $('textarea').val('')
+                                                        alert('Your application ID is: ' + response);
+                                                    })
+                                                }
+                                            });
+                                        }
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+                else {
+                    alert('Please provide all details!')
+                }
+            })
+
+            $.get('/getschemes', (response) => {
+                const key1 = 'department';
+                const data1 = [...new Map(response.map(item => [item[key1], item])).values()];
+                for (let i = 0; i < data1.length; i++) {
+                    $("#department_select").append(`<option value="${data1[i].department}">${data1[i].department}</option>`)
+                }
+
+                const key2 = 'scheme';
+                const data2 = [...new Map(response.map(item => [item[key2], item])).values()];
+                for (let i = 0; i < data2.length; i++) {
+                    $("#schemes_select").append(`<option value="${data2[i].scheme}">${data2[i].scheme}</option>`)
+                }
+
+                //by department
+                $('#bydepartment').on('click', function () {
+                    window.location.href = '/search?department=' + $('#department_select').find(":selected").val().toLowerCase();
+                })
+                //by scheme
+                $('#byscheme').on('click', function () {
+                    window.location.href = '/search?scheme=' + $('#schemes_select').find(":selected").val().toLowerCase();
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
